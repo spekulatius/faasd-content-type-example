@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  php7-json:
+    lang: php7
+    handler: ./php7-json
+    image: spekulatius/php7-json:latest
+    environment:
+      write_debug: true
+      content_type: application/json
